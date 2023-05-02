@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 
 const port = 3000;
-const publicdir = path.join(__dirname, 'Public');
+const publicdir = path.join(__dirname, 'public');
 
 const tempDirs = {
   '/': { file: 'index.html', type: 'text/html' },
@@ -23,7 +23,7 @@ const server = http.createServer((req, res) => {
     });
   } else {
     res.writeHead(404, { 'Content-Type': 'text/html' });
-    res.end('<h1>Not Found</h1>');
+    res.end('<h1>404, Not Found This page.</h1>')
   }
 });
 
